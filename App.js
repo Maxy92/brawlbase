@@ -1,41 +1,14 @@
-
-import But from './But';
-const App =() => {
-
-
-return(
-<div>
-
-<div class="hola">
+import Nav from './Nav';
+import Boty from './Boty'
 
 
-
-<div class="but">
-<But />
-</div>
-
-</div>
-
-
-
-
-
-
-
-
-
-</div>
-
-
-
-
-)
-
-
-
+function App() {
+  return (
+    <div className="App">
+     <Nav />
+     <Boty />
+    </div>
+  );
 }
-
-
-
 
 export default App;
