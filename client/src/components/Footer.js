@@ -30,7 +30,7 @@ const Footer=()=>{
         </MDBRow>
       </MDBContainer>
 
-      <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+      <div className='text-center p-3' style={{ backgroundcolor: 'rgba(0, 0, 0, 0.2)' }}>
         &copy; {new Date().getFullYear()} Copyright:{' '}
         <a className='text-dark' href='https://mdbootstrap.com/'>
           Escuela Técnica N 35 Distrito 18 4 4° Turno Tarde 

@@ -5,23 +5,28 @@ import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn, 
 
 import * as mdb from 'mdb-react-ui-kit'; // lib
 import { Input } from 'mdb-react-ui-kit'; // module
-const Card =()=>{
+import {Link} from 'react-router-dom'
+const Card =(props)=>{
 
 return(
 
     <MDBCard style={{ maxWidth: '22rem' }}>
       <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-        <MDBCardImage src='https://mdbcdn.b-cdn.net/img/new/standard/nature/111.jpg' fluid alt='...' />
+        <MDBCardImage src={props.image} fluid alt='...' />
         <a>
-          <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
+          <div className='mask' style={{ backgroundcolor: 'rgba(251, 251, 251, 0.15)' }}></div>
         </a>
       </MDBRipple>
       <MDBCardBody>
-        <MDBCardTitle>Card title</MDBCardTitle>
+        <MDBCardTitle>{props.title}</MDBCardTitle>
         <MDBCardText>
-          Some quick example text to build on the card title and make up the bulk of the card's content.
+          {props.description}
         </MDBCardText>
-        <MDBBtn href='#'>Button</MDBBtn>
+        
+        <MDBCardText>
+          {props.precio}
+        </MDBCardText>
+        <Link style={{color: "white"}} to={`/character/${props.id}`}><MDBBtn>About</MDBBtn></Link>
       </MDBCardBody>
     </MDBCard>
 
